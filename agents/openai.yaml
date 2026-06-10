@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Learning Scaffold"
+  short_description: "Learn project architecture while building"
+  default_prompt: "Use $project-learning-scaffold to help me build this project while learning its architecture and core concepts."
