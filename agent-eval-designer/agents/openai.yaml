@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Eval Designer"
+  short_description: "Design evals for agent behavior"
+  default_prompt: "Use $agent-eval-designer to create eval scenarios for this agent and its failure modes."

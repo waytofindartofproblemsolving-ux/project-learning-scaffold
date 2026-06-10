@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Explorer"
+  short_description: "Gather sourced agent facts"
+  default_prompt: "Use $agent-explorer to investigate the docs and code paths needed for this agent task."
