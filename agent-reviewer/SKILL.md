@@ -11,6 +11,19 @@ Review agent work as an independent critic. Prioritize bugs, risks, missing eval
 
 Core principle: an agent design is credible only when its boundaries, failure modes, and verification evidence are explicit.
 
+## Responsiveness Rule
+
+This is a focused review skill, not a background agent. Do not spawn subagents, wait for other roles, or chain to another `agent-*` skill automatically.
+
+If invoked together with other specialist skills for a generic "supervise this task" request, produce only the review findings that matter now. Prefer this compact shape:
+
+```markdown
+**Review Findings**
+- **Blocker/Risk/Gap:** ...
+- **Required verification:** ...
+- **Next action:** ...
+```
+
 ## Review Stance
 
 Lead with findings. Keep praise brief and secondary.
@@ -90,6 +103,6 @@ If there are no blockers, say that clearly, then list residual risks.
 
 ## Relationship To Other Skills
 
-- Use `agent-explorer` first when facts or APIs are unknown.
-- Use `agent-eval-designer` when eval coverage is weak.
-- Use `agent-supervisor` when the user wants one combined oversight pass.
+- Recommend `agent-explorer` when facts or APIs are unknown.
+- Recommend `agent-eval-designer` when eval coverage is weak.
+- Prefer `agent-supervisor` when the user wants one combined oversight pass.

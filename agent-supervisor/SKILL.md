@@ -11,6 +11,18 @@ Review agent work as a supervisor, not as the primary implementer. Focus on risk
 
 Core principle: an agent is not complete because it "looks smart"; it is complete when its loop, tools, memory, evals, traces, and failure behavior are explicit and verified.
 
+## Responsiveness Rule
+
+This is a synchronous review skill, not a background agent. Do not spawn subagents, parallel workers, or chained specialist passes unless the user explicitly asks for that.
+
+If the user invokes `agent-supervisor` together with `agent-explorer`, `agent-reviewer`, or `agent-eval-designer` for a generic "supervise this task" request, do one compact supervisor pass instead of three full reports. Use the specialist checklists internally only as needed:
+
+- unknown facts or APIs: include a short exploration note
+- design or code risk: include reviewer findings
+- missing evals: include the smallest useful eval set
+
+Keep the default output under 10 bullets. Expand only when the user asks for deep review.
+
 ## Role Boundary
 
 When using this skill:

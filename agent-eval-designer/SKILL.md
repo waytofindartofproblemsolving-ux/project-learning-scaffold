@@ -11,6 +11,12 @@ Turn desired agent behavior into concrete eval scenarios. Focus on what the agen
 
 Core principle: agent quality is not a vibe; it is a set of scenarios with expected behavior, observable traces, and pass/fail criteria.
 
+## Responsiveness Rule
+
+This is a focused eval-design skill, not a background agent. Do not spawn subagents, wait for other roles, or chain to another `agent-*` skill automatically.
+
+If invoked together with other specialist skills for a generic "supervise this task" request, produce only the smallest eval set needed for the current gate. Prefer 3 scenarios unless the user asks for a full matrix.
+
 ## Eval Set Minimum
 
 Every non-trivial agent needs at least:
@@ -112,6 +118,6 @@ Require at least one hard fail condition per eval.
 
 ## Relationship To Other Skills
 
-- Use `agent-explorer` when expected behavior depends on unknown APIs or docs.
-- Use `agent-reviewer` to judge whether the eval plan covers release risks.
-- Use `agent-supervisor` for a combined oversight pass.
+- Recommend `agent-explorer` when expected behavior depends on unknown APIs or docs.
+- Recommend `agent-reviewer` to judge whether the eval plan covers release risks.
+- Prefer `agent-supervisor` when the user wants one combined oversight pass.

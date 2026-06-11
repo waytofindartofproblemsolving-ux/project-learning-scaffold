@@ -20,6 +20,19 @@ Always maintain two parallel tracks:
 
 Keep the learning track concise by default. Expand only when the user asks for a deep dive or the concept is blocking their ability to continue.
 
+## Oversight Skill Routing
+
+Use this skill for learning while building. Do not automatically combine it with every agent oversight skill.
+
+For agent projects:
+
+- Use `agent-supervisor` for one compact supervision pass.
+- Use `agent-explorer` only when unknown docs, APIs, SDK behavior, or code paths must be investigated.
+- Use `agent-reviewer` only when the current design, code, or completion claim needs critique.
+- Use `agent-eval-designer` only when eval scenarios or pass/fail criteria are the next deliverable.
+
+If the user invokes all three specialist skills just to "supervise" a task, collapse the work into a single `agent-supervisor`-style pass and mention that the specialist skills are best used one at a time.
+
 ## First Response Pattern
 
 When this skill triggers, start by creating a project learning scaffold:

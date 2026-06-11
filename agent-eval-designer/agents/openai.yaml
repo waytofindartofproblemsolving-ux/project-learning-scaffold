@@ -1,4 +1,4 @@
 interface:
-  display_name: "Agent Eval Designer"
-  short_description: "Design evals for agent behavior"
-  default_prompt: "Use $agent-eval-designer to create eval scenarios for this agent and its failure modes."
+  display_name: "Agent Eval Skill"
+  short_description: "Design focused agent evals"
+  default_prompt: "Use $agent-eval-designer only when eval scenarios or pass/fail criteria are needed."

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Agent Supervisor"
-  short_description: "Review agent architecture and evals"
-  default_prompt: "Use $agent-supervisor to review this agent design, tool boundaries, memory, evals, and verification plan."
+  display_name: "Agent Supervisor Skill"
+  short_description: "Compact oversight for agent work"
+  default_prompt: "Use $agent-supervisor for one compact supervision pass over this agent task."

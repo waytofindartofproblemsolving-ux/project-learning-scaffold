@@ -1,4 +1,4 @@
 interface:
-  display_name: "Agent Reviewer"
-  short_description: "Review agent design and code risks"
-  default_prompt: "Use $agent-reviewer to review this agent architecture, implementation, and verification evidence."
+  display_name: "Agent Reviewer Skill"
+  short_description: "Focused review of agent risks"
+  default_prompt: "Use $agent-reviewer for a focused review of this agent design, code, or completion claim."

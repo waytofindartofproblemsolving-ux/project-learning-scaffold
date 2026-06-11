@@ -11,6 +11,19 @@ Investigate facts for agent work. Do not design the agent, write implementation 
 
 Core principle: an explorer reduces uncertainty by reading primary sources and local code, then reports evidence, gaps, and confidence.
 
+## Responsiveness Rule
+
+This is a focused investigation skill, not a background agent. Do not spawn subagents, wait for other roles, or chain to another `agent-*` skill automatically.
+
+If invoked together with other specialist skills for a generic "supervise this task" request, do not produce a full separate report unless there is an explicit unknown fact to investigate. Prefer one short section:
+
+```markdown
+**Exploration Note**
+- Checked:
+- Useful fact:
+- Remaining unknown:
+```
+
 ## Scope
 
 Use this skill to answer questions such as:
@@ -81,8 +94,8 @@ Bad:
 - The SDK probably supports retries.
 ```
 
-## Handoff To Other Agent Roles
+## Optional Next Skills
 
-- Hand off unresolved architecture tradeoffs to `agent-reviewer`.
-- Hand off behavior scenarios and pass/fail criteria to `agent-eval-designer`.
-- Hand off project learning implications to `project-learning-scaffold`.
+- Recommend `agent-reviewer` when unresolved architecture tradeoffs need critique.
+- Recommend `agent-eval-designer` when behavior scenarios and pass/fail criteria are the next deliverable.
+- Recommend `project-learning-scaffold` when the user wants to learn the project concepts while building.
